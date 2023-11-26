@@ -62,7 +62,6 @@ function AsideLeft(props) {
         <div className={`h-full ${isCollapsed ? 'hidden' : 'px-8'}`}>
 
             <Logo {...props} />
-            <DarkModeButton />
 
             <section className='siteInfo flex flex-col dark:text-gray-300 pt-8'>
                 {siteConfig('DESCRIPTION')}
@@ -71,6 +70,10 @@ function AsideLeft(props) {
             <section className='flex flex-col text-gray-600'>
                 <div className='w-12 my-4' />
                 <MenuList {...props} />
+            </section>
+
+            <section className='flex justify-center dark:text-gray-200 pt-4'>
+                <DarkModeButton />
             </section>
 
             <section className='flex flex-col text-gray-600'>
@@ -101,10 +104,6 @@ function AsideLeft(props) {
                 <div className='w-12 my-4' />
                 <SocialButton />
                 <SiteInfo />
-            </section>
-
-            <section className='flex justify-center dark:text-gray-200 pt-4'>
-                <DarkModeButton />
             </section>
 
             <section className='sticky top-0 pt-12'>
