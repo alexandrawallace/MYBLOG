@@ -72,13 +72,13 @@ function AsideLeft(props) {
                 <MenuList {...props} />
             </section>
 
-            <section className='flex justify-center dark:text-gray-200 pt-4'>
-                <DarkModeButton />
-            </section>
-
             <section className='flex flex-col text-gray-600'>
                 <div className='w-12 my-4' />
                 <SearchInput {...props} />
+            </section>
+
+            <section className='flex justify-center dark:text-gray-200 pt-4'>
+                <DarkModeButton />
             </section>
 
             <section className='flex flex-col dark:text-gray-300'>
