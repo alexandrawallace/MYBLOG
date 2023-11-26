@@ -22,8 +22,8 @@ const TopNav = props => {
 
     {/* 导航栏 */}
     <div id='sticky-nav' className={'relative w-full top-0 z-20 transform duration-500 bg-white dark:bg-black'}>
-      <DarkModeButton />
       <Collapse type='vertical' isOpen={isOpen} collapseRef={collapseRef}>
+        <DarkModeButton />
         <div className='py-1 px-5'>
           <MenuList {...props} onHeightChange={(param) => collapseRef.current?.updateCollapseHeight(param)} />
           <SearchInput {...props} />
