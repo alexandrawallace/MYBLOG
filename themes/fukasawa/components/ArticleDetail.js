@@ -67,6 +67,12 @@ export default function ArticleDetail(props) {
                 <span className='mx-2 text-gray-400 dark:text-gray-500'>
                   {locale.COMMON.LAST_EDITED_TIME}: {post.lastEditedDay}
                 </span>
+                <span className='mr-2'>|</span>
+                <span className="hidden busuanzi_container_page_pv mr-2">
+                    <i className='mr-1 fas fa-eye' />
+                    &nbsp;
+                    <span className="mr-2 busuanzi_value_page_pv" />
+                </span>
               </>)}
 
             <div className='my-2'>
@@ -77,11 +83,6 @@ export default function ArticleDetail(props) {
                         ))}
                     </div>
                 )}
-                <span className="hidden busuanzi_container_page_pv mr-2">
-                    <i className='mr-1 fas fa-eye' />
-                    &nbsp;
-                    <span className="mr-2 busuanzi_value_page_pv" />
-                </span>
             </div>
             </div>
 

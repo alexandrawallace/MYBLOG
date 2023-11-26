@@ -1,12 +1,12 @@
 import Logo from './Logo'
-import GroupCategory from './GroupCategory'
+// import GroupCategory from './GroupCategory'
 import { MenuList } from './MenuList'
-import GroupTag from './GroupTag'
+// import GroupTag from './GroupTag'
 import SearchInput from './SearchInput'
 import SiteInfo from './SiteInfo'
 import Catalog from './Catalog'
 import Announcement from './Announcement'
-import { useRouter } from 'next/router'
+// import { useRouter } from 'next/router'
 import DarkModeButton from '@/components/DarkModeButton'
 import SocialButton from './SocialButton'
 import { useFukasawaGlobal } from '..'
@@ -20,8 +20,9 @@ import { siteConfig } from '@/lib/config'
  * @returns
  */
 function AsideLeft(props) {
-  const { tagOptions, currentTag, categoryOptions, currentCategory, post, slot, notice } = props
-  const router = useRouter()
+//   const { tagOptions, currentTag, categoryOptions, currentCategory, post, slot, notice } = props
+  const { post, slot, notice } = props
+  //   const router = useRouter()
   const { isCollapsed, setIsCollapse } = useFukasawaGlobal()
   // 折叠侧边栏
   const toggleOpen = () => {
@@ -56,6 +57,7 @@ function AsideLeft(props) {
         {/* 折叠按钮 */}
         {siteConfig('FUKASAWA_SIDEBAR_COLLAPSE_BUTTON', null, CONFIG) && <div className={`${isCollapsed ? '' : 'ml-80'} hidden lg:block sticky top-0 mx-2 cursor-pointer hover:scale-110 duration-150 px-3 py-2`} onClick={toggleOpen}>
             {isCollapsed ? <i className="fa-solid fa-indent text-xl"></i> : <i className='fas fa-bars text-xl'></i>}
+            <DarkModeButton />
         </div>}
 
         <div className={`h-full ${isCollapsed ? 'hidden' : 'px-8'}`}>
@@ -85,7 +87,7 @@ function AsideLeft(props) {
                  <AdSlot type='in-article'/>
             </section>
 
-            {router.asPath !== '/tag' && <section className='flex flex-col'>
+            {/* {router.asPath !== '/tag' && <section className='flex flex-col'>
                 <div className='w-12 my-4' />
                 <GroupTag tags={tagOptions} currentTag={currentTag} />
             </section>}
@@ -93,7 +95,7 @@ function AsideLeft(props) {
             {router.asPath !== '/category' && <section className='flex flex-col'>
                 <div className='w-12 my-4' />
                 <GroupCategory categories={categoryOptions} currentCategory={currentCategory} />
-            </section>}
+            </section>} */}
 
             <section className='flex flex-col'>
                 <div className='w-12 my-4' />
