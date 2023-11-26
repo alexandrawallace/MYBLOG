@@ -4,7 +4,7 @@ import { MenuList } from './MenuList'
 import Logo from './Logo'
 import SearchInput from './SearchInput'
 import DarkModeButton from '@/components/DarkModeButton'
-
+import SiteInfo from './SiteInfo'
 /**
  * 顶部导航
  * @param {*} param0
@@ -23,12 +23,13 @@ const TopNav = props => {
     {/* 导航栏 */}
     <div id='sticky-nav' className={'relative w-full top-0 z-20 transform duration-500 bg-white dark:bg-black'}>
       <Collapse type='vertical' isOpen={isOpen} collapseRef={collapseRef}>
-        <DarkModeButton />
         <div className='py-1 px-5'>
           <MenuList {...props} onHeightChange={(param) => collapseRef.current?.updateCollapseHeight(param)} />
           <SearchInput {...props} />
         </div>
       </Collapse>
+      <DarkModeButton />
+      <SiteInfo />
       <div className='w-full flex justify-between items-center p-4 '>
         {/* 左侧LOGO 标题 */}
         <div className='flex flex-none flex-grow-0'>
