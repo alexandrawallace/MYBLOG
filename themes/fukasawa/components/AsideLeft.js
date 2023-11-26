@@ -10,7 +10,7 @@ import Announcement from './Announcement'
 import DarkModeButton from '@/components/DarkModeButton'
 import SocialButton from './SocialButton'
 import { useFukasawaGlobal } from '..'
-import CONFIG from '@/themes/fukasawa/config'
+// import CONFIG from '@/themes/fukasawa/config'
 import { AdSlot } from '@/components/GoogleAdsense'
 import { siteConfig } from '@/lib/config'
 
@@ -23,11 +23,12 @@ function AsideLeft(props) {
 //   const { tagOptions, currentTag, categoryOptions, currentCategory, post, slot, notice } = props
   const { post, slot, notice } = props
   //   const router = useRouter()
-  const { isCollapsed, setIsCollapse } = useFukasawaGlobal()
+  const { isCollapsed } = useFukasawaGlobal()
+  //   const { isCollapsed, setIsCollapse } = useFukasawaGlobal()
   // 折叠侧边栏
-  const toggleOpen = () => {
-    setIsCollapse(!isCollapsed)
-  }
+  //   const toggleOpen = () => {
+  //     setIsCollapse(!isCollapsed)
+  //   }
 
   // 自动折叠侧边栏 onResize 窗口宽度小于1366 || 滚动条滚动至页面的300px时 ; 将open设置为false
   //   useEffect(() => {
@@ -58,7 +59,7 @@ function AsideLeft(props) {
         {/* {siteConfig('FUKASAWA_SIDEBAR_COLLAPSE_BUTTON', null, CONFIG) && <div className={`${isCollapsed ? '' : 'ml-80'} hidden lg:block sticky top-0 mx-2 cursor-pointer hover:scale-110 duration-150 px-3 py-2`} onClick={toggleOpen}>
             {isCollapsed ? <i className="fa-solid fa-indent text-xl"></i> : <i className='fas fa-bars text-xl'></i>}
         </div>} */}
-
+        <br/>
         <div className={`h-full ${isCollapsed ? 'hidden' : 'px-8'}`}>
 
             <Logo {...props} />
