@@ -26,8 +26,8 @@ const TopNav = props => {
         <div className='py-1 px-5'>
           <MenuList {...props} onHeightChange={(param) => collapseRef.current?.updateCollapseHeight(param)} />
           <SearchInput {...props} />
-          <section className='flex justify-center dark:text-gray-200 pt-4'>
-            <DarkModeButton />
+          <DarkModeButton />
+          <section className='flex justify-center dark:text-gray-200 pt-4'> 
             <SiteInfo />
           </section>
         </div>
