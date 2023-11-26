@@ -57,12 +57,12 @@ function AsideLeft(props) {
         {/* 折叠按钮 */}
         {siteConfig('FUKASAWA_SIDEBAR_COLLAPSE_BUTTON', null, CONFIG) && <div className={`${isCollapsed ? '' : 'ml-80'} hidden lg:block sticky top-0 mx-2 cursor-pointer hover:scale-110 duration-150 px-3 py-2`} onClick={toggleOpen}>
             {isCollapsed ? <i className="fa-solid fa-indent text-xl"></i> : <i className='fas fa-bars text-xl'></i>}
-            <DarkModeButton />
         </div>}
 
         <div className={`h-full ${isCollapsed ? 'hidden' : 'px-8'}`}>
 
             <Logo {...props} />
+            <DarkModeButton />
 
             <section className='siteInfo flex flex-col dark:text-gray-300 pt-8'>
                 {siteConfig('DESCRIPTION')}
