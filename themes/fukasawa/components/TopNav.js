@@ -26,10 +26,12 @@ const TopNav = props => {
         <div className='py-1 px-5'>
           <MenuList {...props} onHeightChange={(param) => collapseRef.current?.updateCollapseHeight(param)} />
           <SearchInput {...props} />
+          <section className='flex justify-center dark:text-gray-200 pt-4'>
+            <DarkModeButton />
+            <SiteInfo />
+          </section>
         </div>
       </Collapse>
-      <DarkModeButton />
-      <SiteInfo />
       <div className='w-full flex justify-between items-center p-4 '>
         {/* 左侧LOGO 标题 */}
         <div className='flex flex-none flex-grow-0'>
